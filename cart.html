@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শপিং কার্ট - আমার ই-কমার্স সাইট</title> <!-- Title পরিবর্তিত -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================= হেডার শুরু (অন্য পেজের মতই) ======================= -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo"> <a href="index.html">আমারস্টোর</a> </div>
+            <nav class="main-nav"> <!-- Desktop Nav Links --> </nav>
+            <div class="header-actions">
+                <!-- Search, User, Wishlist, Cart, Hamburger -->
+                <div class="search-container"> <button class="action-btn search-toggle-btn" aria-label="Search"><i class="fas fa-search"></i></button> <div class="search-box"><!-- Input --></div> </div>
+                <button class="action-btn" aria-label="Account"><i class="fas fa-user"></i></button>
+                <button class="action-btn wishlist-btn" aria-label="Wishlist"><i class="fas fa-heart"></i><span class="item-count wishlist-count">0</span></button>
+                <button class="action-btn cart-btn" aria-label="Cart"><i class="fas fa-shopping-cart"></i><span class="item-count cart-count">0</span></button>
+                <button class="hamburger-menu" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <!-- ======================= হেডার শেষ ======================= -->
+
+    <!-- ======================= সাইডবার মেনু (অন্য পেজের মতই) ======================= -->
+    <aside class="sidebar-menu" id="mobile-nav-panel">
+        <div class="sidebar-search"> <!-- Search --> </div>
+        <nav class="sidebar-nav"> <ul> <!-- Links --> </ul> </nav>
+        <div class="sidebar-footer"> <p>© আমারস্টোর ২০২৩</p> </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <!-- ======================= সাইডবার মেনু শেষ ======================= -->
+
+
+    <!-- ======================= প্রধান কন্টেন্ট শুরু (Cart Page) ======================= -->
+    <main id="main-content">
+        <div class="container section-padding">
+            <h1 class="page-title text-center">আপনার শপিং কার্ট</h1>
+
+            <div class="cart-page-layout">
+
+                <!-- কার্ট আইটেম টেবিল -->
+                <div class="cart-items-container">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">প্রোডাক্ট</th>
+                                <th>মূল্য</th>
+                                <th>পরিমাণ</th>
+                                <th>মোট</th>
+                                <th>অপসারণ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-table-body">
+                            <!-- কার্ট আইটেম এখানে JS দিয়ে লোড হবে -->
+                            <!-- ডেমো রো (JS লোড করার আগে) -->
+                            <!--
+                            <tr>
+                                <td class="cart-item-image"><img src="images/placeholder.png" alt="Product Name"></td>
+                                <td class="cart-item-name"><a href="#">Product Name Here</a></td>
+                                <td class="cart-item-price">৳1,200</td>
+                                <td class="cart-item-quantity">
+                                    <div class="quantity-selector cart-quantity">
+                                         <button class="quantity-btn minus">-</button>
+                                         <input type="number" value="1" min="1">
+                                         <button class="quantity-btn plus">+</button>
+                                     </div>
+                                </td>
+                                <td class="cart-item-subtotal">৳1,200</td>
+                                <td class="cart-item-remove">
+                                    <button class="remove-btn" aria-label="Remove Item">×</button>
+                                </td>
+                            </tr>
+                            -->
+                            <tr id="cart-empty-row" style="display: none;">
+                                <td colspan="6" class="text-center empty-cart-message">আপনার কার্ট খালি। <a href="index.html">কেনাকাটা শুরু করুন!</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- কার্ট সামারি ও চেকআউট -->
+                <div class="cart-summary">
+                    <h3>কার্ট সামারি</h3>
+                    <div class="summary-row">
+                        <span>মোট আইটেম:</span>
+                        <span id="summary-item-count">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>সাবটোটাল:</span>
+                        <span id="summary-subtotal">৳0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>ডেলিভারি চার্জ:</span>
+                        <span id="summary-delivery">৳60</span> <!-- অথবা পরিবর্তনশীল -->
+                    </div>
+                    <div class="summary-total">
+                        <span>সর্বমোট:</span>
+                        <span id="summary-total">৳60</span>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary checkout-btn">চেকআউট করুন <i class="fas fa-arrow-right"></i></a>
+                    <a href="index.html" class="continue-shopping-link">কেনাকাটা চালিয়ে যান</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- ======================= প্রধান কন্টেন্ট শেষ ======================= -->
+
+
+    <!-- ======================= ফুটার শুরু (অন্য পেজের মতই) ======================= -->
+    <footer id="main-footer"> <!-- ... Footer content ... --> </footer>
+    <!-- ======================= ফুটার শেষ ======================= -->
+
+    <script src="script.js"></script>
+</body>
+</html>

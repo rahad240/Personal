@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সকল প্রোডাক্ট - আমার ই-কমার্স সাইট</title> <!-- Title পরিবর্তন করুন -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================= হেডার শুরু (index.html এর মতই) ======================= -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">আমারস্টোর</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="#">পুরুষ</a></li>
+                    <li><a href="#">মহিলা</a></li>
+                    <li><a href="#">শিশু</a></li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <button class="action-btn search-toggle-btn" aria-label="অনুসন্ধান খুলুন">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-box">
+                        <input type="search" placeholder="প্রোডাক্ট খুঁজুন..." aria-label="Search Input">
+                        <button type="submit" aria-label="অনুসন্ধান করুন"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <button class="action-btn" aria-label="অ্যাকাউন্ট">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="action-btn wishlist-btn" aria-label="উইশলিস্ট">
+                    <i class="fas fa-heart"></i>
+                    <span class="item-count wishlist-count">0</span>
+                </button>
+                <button class="action-btn cart-btn" aria-label="শপিং কার্ট">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="item-count cart-count">0</span>
+                </button>
+                <button class="hamburger-menu" aria-label="মেনু খুলুন/বন্ধ করুন">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- ======================= হেডার শেষ ======================= -->
+
+
+    <!-- ======================= সাইডবার মেনু (index.html এর মতই) ======================= -->
+    <aside class="sidebar-menu" id="mobile-nav-panel">
+         <div class="sidebar-search">
+             <input type="search" placeholder="প্রোডাক্ট খুঁজুন..." aria-label="Search Input Mobile">
+             <button type="submit" aria-label="অনুসন্ধান করুন মোবাইল"><i class="fas fa-search"></i></button>
+         </div>
+        <nav class="sidebar-nav">
+            <ul>
+                 <li><a href="#">অ্যাকাউন্ট</a></li>
+                 <li><a href="#">উইশলিস্ট</a></li>
+                 <li class="has-submenu">
+                     <span class="submenu-toggle">ক্যাটাগরি</span>
+                     <ul class="submenu">
+                         <li><a href="#">পুরুষ</a></li>
+                         <li><a href="#">মহিলা</a></li>
+                         <li><a href="#">শিশু</a></li>
+                         <li><a href="#">অন্যান্য</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="#">ট্র্যাক অর্ডার</a></li>
+                 <li><a href="#">সেটিংস</a></li>
+                 <li><a href="#">সাহায্য</a></li>
+            </ul>
+        </nav>
+         <div class="sidebar-footer">
+             <p>© আমারস্টোর ২০২৩</p>
+         </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <!-- ======================= সাইডবার মেনু শেষ ======================= -->
+
+
+    <!-- ======================= প্রধান কন্টেন্ট শুরু (Products Page) ======================= -->
+    <main id="main-content">
+        <div class="container section-padding">
+             <h1 class="page-title text-center">সকল প্রোডাক্ট</h1> <!-- পেজের টাইটেল -->
+
+             <div class="products-page-layout">
+
+                 <!-- ফিল্টার সাইডবার (ডান দিকে) -->
+                 <aside class="filter-sidebar">
+                     <h3 class="filter-title">ফিল্টার করুন</h3>
+                     <button class="close-filters-btn" aria-label="ফিল্টার বন্ধ করুন">×</button> <!-- মোবাইল এর জন্য -->
+
+                     <!-- Category Filter -->
+                     <div class="filter-group">
+                         <h4 class="filter-group-title">বিভাগ</h4>
+                         <ul class="filter-list">
+                             <li><label><input type="checkbox" name="category" value="পুরুষ"> পুরুষ</label></li>
+                             <li><label><input type="checkbox" name="category" value="মহিলা"> মহিলা</label></li>
+                             <li><label><input type="checkbox" name="category" value="শিশু"> শিশু</label></li>
+                             <li><label><input type="checkbox" name="category" value="এক্সেসরিজ"> এক্সেসরিজ</label></li>
+                             <!-- More categories -->
+                         </ul>
+                     </div>
+
+                     <!-- Price Filter -->
+                     <div class="filter-group">
+                         <h4 class="filter-group-title">মূল্য সীমা</h4>
+                         <div class="price-filter-inputs">
+                              <input type="range" id="price-range-filter" class="price-range-slider" min="100" max="10000" value="10000" step="100">
+                              <div class="price-values">
+                                  <span id="min-price-display">৳100</span>
+                                  <span id="max-price-display">৳10000</span>
+                              </div>
+                               <div id="current-max-price" style="text-align: right; font-size: 0.9em; margin-top: 5px;">সর্বোচ্চ: ৳10000</div>
+                         </div>
+                     </div>
+
+                     <!-- Brand Filter -->
+                     <div class="filter-group">
+                         <h4 class="filter-group-title">ব্র্যান্ড</h4>
+                          <ul class="filter-list">
+                             <li><label><input type="checkbox" name="brand" value="brandA"> ব্র্যান্ড A</label></li>
+                             <li><label><input type="checkbox" name="brand" value="brandB"> ব্র্যান্ড B</label></li>
+                             <li><label><input type="checkbox" name="brand" value="brandC"> ব্র্যান্ড C</label></li>
+                         </ul>
+                     </div>
+
+                      <!-- Color Filter -->
+                     <div class="filter-group">
+                         <h4 class="filter-group-title">রং</h4>
+                         <div class="color-filter-options">
+                              <label><input type="checkbox" name="color" value="red" style="accent-color: red;"><span class="color-swatch-label" style="background-color: red;"></span> লাল</label>
+                              <label><input type="checkbox" name="color" value="blue" style="accent-color: blue;"><span class="color-swatch-label" style="background-color: blue;"></span> নীল</label>
+                              <label><input type="checkbox" name="color" value="black" style="accent-color: black;"><span class="color-swatch-label" style="background-color: black;"></span> কালো</label>
+                              <label><input type="checkbox" name="color" value="white" style="accent-color: #ccc;"><span class="color-swatch-label" style="background-color: white; border: 1px solid #ccc;"></span> সাদা</label>
+                              <label><input type="checkbox" name="color" value="green" style="accent-color: green;"><span class="color-swatch-label" style="background-color: green;"></span> সবুজ</label>
+                         </div>
+                     </div>
+
+                     <button class="btn btn-secondary filter-apply-btn" id="apply-filters-btn">ফিল্টার প্রয়োগ করুন</button>
+                     <button class="btn btn-link filter-clear-btn" id="clear-filters-btn">পরিষ্কার করুন</button>
+
+                 </aside>
+
+                 <!-- প্রোডাক্ট গ্রিড ও সর্টিং (বাম দিকে) -->
+                 <div class="product-listing-area">
+                      <!-- সর্টিং ও ফিল্টার টগল (মোবাইল) -->
+                     <div class="list-controls">
+                         <button class="filter-toggle-btn" id="mobile-filter-toggle"><i class="fas fa-filter"></i> ফিল্টার</button>
+                         <select name="sort" id="sort-products" aria-label="প্রোডাক্ট সাজান">
+                             <option value="default">ডিফল্ট সর্টিং</option>
+                             <option value="price_asc">মূল্য: কম থেকে বেশি</option>
+                             <option value="price_desc">মূল্য: বেশি থেকে কম</option>
+                             <option value="newest">নতুন</option>
+                             <option value="rating">রেটিং</option>
+                         </select>
+                     </div>
+
+                     <!-- প্রোডাক্ট গ্রিড -->
+                     <div class="product-grid" id="all-product-grid">
+                         <!-- সমস্ত প্রোডাক্ট এখানে JS দিয়ে লোড হবে -->
+                         <p class="loading-text">প্রোডাক্ট লোড হচ্ছে...</p>
+                     </div>
+
+                     <!-- পেজিনেশন (ঐচ্ছিক) -->
+                     <nav class="pagination" aria-label="Page navigation">
+                          <!-- পেজিনেশন লিঙ্ক এখানে যোগ করা যেতে পারে -->
+                     </nav>
+                 </div>
+             </div>
+        </div>
+    </main>
+    <!-- ======================= প্রধান কন্টেন্ট শেষ ======================= -->
+
+
+    <!-- ======================= ফুটার শুরু (index.html এর মতই) ======================= -->
+    <footer id="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section about"><h4>আমাদের সম্পর্কে</h4><p>...</p></div>
+            <div class="footer-section links"><h4>গুরুত্বপূর্ণ লিঙ্ক</h4><ul><li>...</li></ul></div>
+            <div class="footer-section contact"><h4>যোগাযোগ</h4><p>...</p></div>
+            <div class="footer-section social"><h4>আমাদের অনুসরণ করুন</h4><!-- links --></div>
+        </div>
+        <div class="footer-bottom"><p>© ২০২৩ আমারস্টোর। সর্বস্বত্ব সংরক্ষিত।</p></div>
+    </footer>
+    <!-- ======================= ফুটার শেষ ======================= -->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রোডাক্টের বিবরণ - আমার ই-কমার্স সাইট</title> <!-- Title পরিবর্তিত -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================= হেডার শুরু (অন্য পেজের মতই) ======================= -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">আমারস্টোর</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="#">পুরুষ</a></li>
+                    <li><a href="#">মহিলা</a></li>
+                    <li><a href="#">শিশু</a></li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <button class="action-btn search-toggle-btn" aria-label="অনুসন্ধান খুলুন"> <i class="fas fa-search"></i> </button>
+                    <div class="search-box">
+                        <input type="search" placeholder="প্রোডাক্ট খুঁজুন..." aria-label="Search Input">
+                        <button type="submit" aria-label="অনুসন্ধান করুন"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <button class="action-btn" aria-label="অ্যাকাউন্ট"> <i class="fas fa-user"></i> </button>
+                <button class="action-btn wishlist-btn" aria-label="উইশলিস্ট"> <i class="fas fa-heart"></i> <span class="item-count wishlist-count">0</span> </button>
+                <button class="action-btn cart-btn" aria-label="শপিং কার্ট"> <i class="fas fa-shopping-cart"></i> <span class="item-count cart-count">0</span> </button>
+                <button class="hamburger-menu" aria-label="মেনু খুলুন/বন্ধ করুন"> <span></span><span></span><span></span> </button>
+            </div>
+        </div>
+    </header>
+    <!-- ======================= হেডার শেষ ======================= -->
+
+    <!-- ======================= সাইডবার মেনু (অন্য পেজের মতই) ======================= -->
+    <aside class="sidebar-menu" id="mobile-nav-panel">
+         <div class="sidebar-search"> <input type="search" placeholder="প্রোডাক্ট খুঁজুন..." aria-label="Search Input Mobile"> <button type="submit" aria-label="অনুসন্ধান করুন মোবাইল"><i class="fas fa-search"></i></button> </div>
+        <nav class="sidebar-nav"> <ul> <!-- Links... --> </ul> </nav>
+         <div class="sidebar-footer"> <p>© আমারস্টোর ২০২৩</p> </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <!-- ======================= সাইডবার মেনু শেষ ======================= -->
+
+
+    <!-- ======================= প্রধান কন্টেন্ট শুরু (Product Detail Page) ======================= -->
+    <main id="main-content">
+        <div class="container section-padding">
+            <div class="product-detail-layout" id="product-detail-container">
+                <!-- প্রোডাক্ট বিস্তারিত এখানে JS দিয়ে লোড হবে -->
+                <p class="loading-text">প্রোডাক্টের বিবরণ লোড হচ্ছে...</p>
+
+                <!-- ডেমো স্ট্রাকচার (JS লোড করার আগে) -->
+                <!--
+                <div class="product-detail-image">
+                    <img src="images/placeholder.png" alt="প্রোডাক্টের নাম">
+                    </div>
+                <div class="product-detail-info">
+                    <h1 class="product-title">প্রোডাক্টের নাম এখানে</h1>
+                    <div class="product-meta">
+                        <span>ক্যাটাগরি: <a href="#">ক্যাটাগরি</a></span> |
+                        <span>ব্র্যান্ড: <a href="#">ব্র্যান্ড</a></span> |
+                        <span class="product-rating">রেটিং: ★★★★☆ (4.5)</span>
+                    </div>
+                    <p class="product-price-detail">
+                        <span class="current-price">৳0.00</span>
+                        <span class="original-price">৳0.00</span>
+                        <span class="discount-badge">-0%</span>
+                    </p>
+                    <p class="product-description">
+                        প্রোডাক্টের সংক্ষিপ্ত বিবরণ এখানে লেখা হবে। এটি পণ্যের বৈশিষ্ট্য এবং গুণাবলী তুলে ধরবে।
+                    </p>
+
+                    <div class="product-options">
+                         Options like size, color will go here
+                        <div class="option-group">
+                            <label for="size-select">সাইজ:</label>
+                            <select name="size" id="size-select">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                            </select>
+                        </div>
+                        </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label for="quantity">পরিমাণ:</label>
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-detail-btn" data-product-id="0">
+                             <i class="fas fa-shopping-cart"></i> কার্টে যোগ করুন
+                        </button>
+                         <button class="btn btn-secondary wishlist-detail-btn" data-product-id="0">
+                            <i class="far fa-heart"></i> উইশলিস্ট
+                         </button>
+                    </div>
+
+                     Product Full Description/Specs
+                    <div class="product-full-details">
+                         <h3>বিস্তারিত বিবরণ</h3>
+                         <p>এখানে প্রোডাক্টের আরও বিস্তারিত তথ্য, স্পেসিফিকেশন ইত্যাদি থাকবে...</p>
+                    </div>
+                </div>
+                -->
+                <!-- ডেমো স্ট্রাকচার শেষ -->
+
+            </div>
+        </div>
+
+         <!-- Related Products Section (Optional) -->
+         <section class="related-products section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">সম্পর্কিত প্রোডাক্টস</h2>
+                <div class="product-grid" id="related-product-grid">
+                    <!-- সম্পর্কিত প্রোডাক্ট এখানে লোড হবে -->
+                    <p class="loading-text">লোড হচ্ছে...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- ======================= প্রধান কন্টেন্ট শেষ ======================= -->
+
+
+    <!-- ======================= ফুটার শুরু (অন্য পেজের মতই) ======================= -->
+    <footer id="main-footer">
+        <div class="container footer-content">
+             <!-- Footer sections... -->
+        </div>
+        <div class="footer-bottom"><p>© ২০২৩ আমারস্টোর। সর্বস্বত্ব সংরক্ষিত।</p></div>
+    </footer>
+    <!-- ======================= ফুটার শেষ ======================= -->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রেজিস্টার - আমার ই-কমার্স সাইট</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================= হেডার (অন্য পেজের মতই) ======================= -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo"> <a href="index.html">আমারস্টোর</a> </div>
+            <nav class="main-nav"> <!-- Desktop Nav Links --> </nav>
+            <div class="header-actions"> <!-- Icons --> </div>
+        </div>
+    </header>
+    <!-- ======================= হেডার শেষ ======================= -->
+
+    <!-- ======================= সাইডবার মেনু (অন্য পেজের মতই) ======================= -->
+    <aside class="sidebar-menu" id="mobile-nav-panel"> <!-- ... Sidebar Content ... --> </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <!-- ======================= সাইডবার মেনু শেষ ======================= -->
+
+    <!-- ======================= প্রধান কন্টেন্ট শুরু (Register Page) ======================= -->
+    <main id="main-content">
+        <div class="container section-padding">
+            <div class="auth-form-container">
+                <h1 class="page-title text-center">নতুন অ্যাকাউন্ট তৈরি করুন</h1>
+                <form id="register-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="register-name">পূর্ণ নাম <span class="required">*</span></label>
+                        <input type="text" id="register-name" name="name" required placeholder="আপনার পুরো নাম">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">ইমেইল ঠিকানা <span class="required">*</span></label>
+                        <input type="email" id="register-email" name="email" required placeholder="আপনার ইমেইল">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">পাসওয়ার্ড <span class="required">*</span></label>
+                        <input type="password" id="register-password" name="password" required placeholder="নতুন পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)">
+                    </div>
+                     <div class="form-group">
+                        <label for="register-confirm-password">পাসওয়ার্ড নিশ্চিত করুন <span class="required">*</span></label>
+                        <input type="password" id="register-confirm-password" name="confirm_password" required placeholder="আবার পাসওয়ার্ডটি লিখুন">
+                    </div>
+                    <div class="terms-conditions mb-1">
+                          <label class="checkbox-label small">
+                              <input type="checkbox" id="register-terms" name="terms" required>
+                              আমি <a href="#" target="_blank">শর্তাবলী</a> পড়েছি এবং সম্মত হয়েছি <span class="required">*</span>
+                          </label>
+                     </div>
+                    <button type="submit" class="btn btn-primary btn-block">রেজিস্টার করুন</button>
+                    <p class="switch-auth-link">
+                        ইতিমধ্যে অ্যাকাউন্ট আছে? <a href="login.html">এখানে লগইন করুন</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- ======================= প্রধান কন্টেন্ট শেষ ======================= -->
+
+    <!-- ======================= ফুটার (অন্য পেজের মতই) ======================= -->
+    <footer id="main-footer"> <!-- ... Footer content ... --> </footer>
+    <!-- ======================= ফুটার শেষ ======================= -->
+
+    <script src="script.js"></script>
+</body>
+</html>

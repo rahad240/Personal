@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমার ই-কমার্স সাইট - হোম</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- ======================= হেডার শুরু ======================= -->
+    <header id="main-header" role="banner">
+        <div class="container header-content" role="navigation">
+            <!-- লোগো -->
+            <div class="logo">
+                <a href="index.html" aria-label="হোমপেজে যাও" title="আমারস্টোর">আমারস্টোর</a>
+            </div>
+
+            <!-- ডেস্কটপ নেভিগেশন -->
+            <nav class="main-nav" role="navigation">
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">হোম</a></li>
+                    <li><a href="products.html?category=পুরুষ">পুরুষ</a></li>
+                    <li><a href="products.html?category=মহিলা">মহিলা</a></li>
+                    <li><a href="products.html?category=শিশু">শিশু</a></li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+
+            <!-- হেডার অ্যাকশনস -->
+            <div class="header-actions" role="toolbar">
+                <!-- সার্চ -->
+                <div class="search-container">
+                    <button class="action-btn search-toggle-btn" aria-label="অনুসন্ধান খুলুন" aria-expanded="false" aria-controls="search-box">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-box" id="search-box">
+                        <input type="search" placeholder="প্রোডাক্ট খুঁজুন..." aria-label="অনুসন্ধান ইনপুট">
+                        <button type="submit" aria-label="অনুসন্ধান করুন"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- ইউজার অ্যাকাউন্ট -->
+                <a href="login.html" class="action-btn" aria-label="অ্যাকাউন্ট" title="লগইন/রেজিস্টার">
+                    <i class="fas fa-user"></i>
+                </a>
+                <!-- উইশলিস্ট -->
+                <button class="action-btn wishlist-btn" aria-label="উইশলিস্ট" title="উইশলিস্ট দেখুন">
+                    <i class="fas fa-heart"></i>
+                    <span class="item-count wishlist-count">0</span>
+                </button>
+                <!-- কার্ট -->
+                <a href="cart.html" class="action-btn cart-btn" aria-label="শপিং কার্ট" title="কার্ট দেখুন">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="item-count cart-count">0</span>
+                </a>
+                <!-- মোবাইল মেনু টগল -->
+                <button class="hamburger-menu" aria-label="মেনু খুলুন/বন্ধ করুন" aria-expanded="false" aria-controls="mobile-nav-panel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- ======================= হেডার শেষ ======================= -->
+
+    <!-- ======================= সাইডবার মেনু শুরু ======================= -->
+    <aside class="sidebar-menu" id="mobile-nav-panel" role="navigation" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="logo-placeholder">আমারস্টোর</span>
+            <button class="sidebar-close-btn" aria-label="মেনু বন্ধ করুন" aria-controls="mobile-nav-panel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-search">
+            <input type="search" placeholder="প্রোডাক্ট খুঁজুন..." aria-label="অনুসন্ধান ইনপুট মোবাইল">
+            <button type="submit" aria-label="অনুসন্ধান করুন মোবাইল"><i class="fas fa-search"></i></button>
+        </div>
+        <nav class="sidebar-nav" role="navigation">
+            <ul>
+                <li><a href="login.html">অ্যাকাউন্ট / লগইন</a></li>
+                <li><a href="#">উইশলিস্ট</a></li>
+                <li class="has-submenu">
+                    <span class="submenu-toggle" aria-expanded="false" aria-controls="category-submenu">ক্যাটাগরি</span>
+                    <ul class="submenu" id="category-submenu">
+                        <li><a href="products.html?category=পুরুষ">পুরুষ</a></li>
+                        <li><a href="products.html?category=মহিলা">মহিলা</a></li>
+                        <li><a href="products.html?category=শিশু">শিশু</a></li>
+                        <li><a href="products.html?category=এক্সেসরিজ">এক্সেসরিজ</a></li>
+                        <li><a href="products.html">সকল প্রোডাক্ট</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ট্র্যাক অর্ডার</a></li>
+                <li><a href="#">সেটিংস</a></li>
+                <li><a href="#">সাহায্য / যোগাযোগ</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>© আমারস্টোর ২০২৩</p>
+            <div class="social mt-1">
+                <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+    <!-- ======================= সাইডবার মেনু শেষ ======================= -->
+
+    <!-- ======================= প্রধান কন্টেন্ট শুরু (Homepage) ======================= -->
+    <main id="main-content" role="main">
+        <!-- Hero ব্যানার সেকশন -->
+        <section class="hero-banner">
+            <div class="container">
+                <h1>সেরা কালেকশন আবিষ্কার করুন</h1>
+                <p>আপনার স্টাইলের জন্য দারুণ সব পোশাক ও এক্সেসরিজ!</p>
+                <a href="products.html" class="btn btn-primary" aria-label="এখনই কিনুন">এখনই কিনুন <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- ফিচারড ক্যাটাগরি সেকশন -->
+        <section class="featured-categories section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">জনপ্রিয় বিভাগ</h2>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <a href="products.html?category=পুরুষ" aria-label="পুরুষদের পোশাক">
+                            <img src="images/placeholder-category-men.jpg" alt="পুরুষদের পোশাক" loading="lazy">
+                            <span>পুরুষ</span>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="products.html?category=মহিলা" aria-label="মহিলাদের পোশাক">
+                            <img src="images/placeholder-category-women.jpg" alt="মহিলাদের পোশাক" loading="lazy">
+                            <span>মহিলা</span>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="products.html?category=শিশু" aria-label="শিশুদের পোশাক">
+                            <img src="images/placeholder-category-kids.jpg" alt="শিশুদের পোশাক" loading="lazy">
+                            <span>শিশু</span>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="products.html?category=এক্সেসরিজ" aria-label="এক্সেসরিজ">
+                            <img src="images/placeholder-category-acc.jpg" alt="এক্সেসরিজ" loading="lazy">
+                            <span>এক্সেসরিজ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ফিচারড প্রোডাক্ট সেকশন -->
+        <section class="featured-products section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">ফিচারড প্রোডাক্টস</h2>
+                <div class="product-grid" id="featured-product-grid">
+                    <!-- প্রোডাক্ট কার্ড এখানে JS দিয়ে লোড হবে -->
+                    <p class="loading-text">প্রোডাক্ট লোড হচ্ছে...</p>
+                    <!-- Example Product Card (to be replaced by JS) -->
+                    <!-- <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-placeholder.jpg" alt="প্রোডাক্ট">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">প্রোডাক্ট নাম</h3>
+                            <p class="product-price">৳১৫০০</p>
+                            <button class="btn btn-primary add-to-cart-btn">কার্টে যোগ করুন</button>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="text-center mt-2">
+                    <a href="products.html" class="btn btn-secondary" aria-label="সব প্রোডাক্ট দেখুন">সব প্রোডাক্ট দেখুন</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter/Offer Section -->
+        <section class="newsletter-section section-padding">
+            <div class="container text-center">
+                <h2>সর্বশেষ অফার ও আপডেটের জন্য সাইন আপ করুন!</h2>
+                <p class="mb-2">নতুন প্রোডাক্ট এবং বিশেষ ডিসকাউন্ট সম্পর্কে সবার আগে জানুন।</p>
+                <form class="newsletter-form" aria-label="নিউজলেটার সাবস্ক্রিপশন">
+                    <input type="email" placeholder="আপনার ইমেইল ঠিকানা" required aria-label="ইমেইল ঠিকানা">
+                    <button type="submit" class="btn btn-primary">সাবস্ক্রাইব</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- ======================= প্রধান কন্টেন্ট শেষ ======================= -->
+
+    <!-- ======================= ফুটার শুরু ======================= -->
+    <footer id="main-footer" role="contentinfo">
+        <div class="container footer-content">
+            <div class="footer-section about">
+                <h4><a href="index.html">আমারস্টোর</a></h4>
+                <p>আমরা সেরা মানের পণ্য সরবরাহ করতে প্রতিশ্রুতিবদ্ধ। আপনার কেনাকাটার অভিজ্ঞতা আনন্দময় হোক।</p>
+            </div>
+            <div class="footer-section links">
+                <h4>গুরুত্বপূর্ণ লিঙ্ক</h4>
+                <ul>
+                    <li><a href="#">শর্তাবলী</a></li>
+                    <li><a href="#">গোপনীয়তা নীতি</a></li>
+                    <li><a href="#">ফেরত নীতি</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                    <li><a href="login.html">লগইন / রেজিস্টার</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>যোগাযোগ</h4>
+                <p><i class="fas fa-map-marker-alt"></i> ঢাকা, বাংলাদেশ</p>
+                <p><i class="fas fa-phone"></i> +৮৮০ ১২৩৪ ৫৬৭৮৯</p>
+                <p><i class="fas fa-envelope"></i> info@amarstore.com</p>
+            </div>
+            <div class="footer-section social">
+                <h4>আমাদের অনুসরণ করুন</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="current-year">২০২৩</span> আমারস্টোর। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+    <!-- ======================= ফুটার শেষ ======================= -->
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toast-notification" role="alert"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Sidebar Toggle
+        document.querySelector('.hamburger-menu').addEventListener('click', function () {
+            const sidebar = document.getElementById('mobile-nav-panel');
+            const overlay = document.getElementById('sidebar-overlay');
+            const isOpen = sidebar.getAttribute('aria-hidden') === 'false';
+
+            sidebar.setAttribute('aria-hidden', !isOpen);
+            overlay.classList.toggle('open');
+            this.setAttribute('aria-expanded', !isOpen);
+            document.body.classList.toggle('no-scroll', !isOpen);
+        });
+
+        // Sidebar Close
+        document.querySelector('.sidebar-close-btn').addEventListener('click', function () {
+            const sidebar = document.getElementById('mobile-nav-panel');
+            const overlay = document.getElementById('sidebar-overlay');
+            const hamburger = document.querySelector('.hamburger-menu');
+
+            sidebar.setAttribute('aria-hidden', 'true');
+            overlay.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('no-scroll');
+        });
+
+        // Search Toggle
+        document.querySelector('.search-toggle-btn').addEventListener('click', function () {
+            const searchContainer = document.querySelector('.search-container');
+            const isOpen = this.getAttribute('aria-expanded') === 'true';
+
+            searchContainer.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isOpen);
+            document.querySelector('#search-box').setAttribute('aria-hidden', isOpen);
+        });
+
+        // Submenu Toggle
+        document.querySelectorAll('.has-submenu .submenu-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
+                const isOpen = this.getAttribute('aria-expanded') === 'true';
+
+                this.setAttribute('aria-expanded', !isOpen);
+                submenu.style.maxHeight = isOpen ? '0' : submenu.scrollHeight + 'px';
+                this.parentElement.classList.toggle('submenu-open');
+            });
+        });
+
+        // Update Copyright Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Scroll Event for Header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Example Toast Notification (to be enhanced with JS)
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Simulate a button click to show toast (for testing)
+        // document.querySelector('.btn-primary').addEventListener('click', () => showToast('সফলভাবে যোগ করা হয়েছে!'));
+    </script>
+</body>
+</html>
